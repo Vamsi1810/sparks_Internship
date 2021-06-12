@@ -80,12 +80,12 @@ DATABASES = {
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ABC_Bank',
-        'USER':'root',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'abc_banking_system',
+        'USER':'postgres',
         'PASSWORD':'root',
         'HOST':'localhost',
-        'PORT':'3306'
+        'PORT':'5432'
     }
 }
 

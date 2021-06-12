@@ -73,5 +73,7 @@ def insertdata(request):
             form.save()
         else :
             form = customerdataform()
+    else:
+        form = customerdataform()
     return render(request,'addcustomerdata.html',{'form':form})
 
