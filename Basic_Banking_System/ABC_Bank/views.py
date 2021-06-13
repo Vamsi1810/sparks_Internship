@@ -16,9 +16,11 @@ def cust_data(request):
             user_count = customerdata.objects.filter(account_number = acc_no).count()
             if(user_count==0):
                 message = "No users found"
+                form = checkdetailForm()
                 return render(request,'customerdata.html',{'form':form, 'message':message ,'bool':"hidden"})
             else :
                 Users = customerdata.objects.get(account_number = acc_no)
+                form = checkdetailForm()
                 return render(request,'customerdata.html',{'form':form,'user':Users})
         else:
             form = checkdetailForm()
@@ -57,9 +59,11 @@ def sendmoney(request):
                 Receiver.balance = Receiver.balance + int(amnt)
                 Receiver.save()
                 message = "Transaction Success"
+                form = transaction()
                 return render(request,'sendmoney.html',{'form':form,'message':message,'signal':"success"})
         else:
             message = "Transaction Failed"
+            form = transaction()
             return render(request,'sendmoney.html',{'form':form,'message':message,'signal':"danger"})
     form = transaction()
     return render(request,'sendmoney.html',{'form':form,'hiddensignal':"hidden"})
