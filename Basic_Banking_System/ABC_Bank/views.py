@@ -23,8 +23,7 @@ def cust_data(request):
         else:
             form = checkdetailForm()
     
-    else:
-        form = checkdetailForm()
+    form = checkdetailForm()
 
     return render(request,'customerdata.html',{'form':form,'bool':"hidden"})
 
@@ -62,8 +61,7 @@ def sendmoney(request):
         else:
             message = "Transaction Failed"
             return render(request,'sendmoney.html',{'form':form,'message':message,'signal':"danger"})
-    else :
-        form = transaction()
+    form = transaction()
     return render(request,'sendmoney.html',{'form':form,'hiddensignal':"hidden"})
 
 def insertdata(request):
@@ -73,7 +71,7 @@ def insertdata(request):
             form.save()
         else :
             form = customerdataform()
-    else:
-        form = customerdataform()
+    
+    form = customerdataform()
     return render(request,'addcustomerdata.html',{'form':form})
 
