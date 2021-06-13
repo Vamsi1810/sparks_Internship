@@ -81,10 +81,10 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'abc_banking_system',
-        'USER':'postgres',
-        'PASSWORD':'root',
-        'HOST':'localhost',
+        'NAME': 'das4r5kafrbql2',
+        'USER':'socbtatwtjmufr',
+        'PASSWORD':'c3a061237f4bbd598a64f1f723e4ad7c1b5835b60ebad1b13240e4d7a2a63cd4',
+        'HOST':'ec2-107-21-10-179.compute-1.amazonaws.com',
         'PORT':'5432'
     }
 }
